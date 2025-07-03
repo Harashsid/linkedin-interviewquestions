@@ -1,0 +1,3 @@
+1.You’re asked to design a highly available logging system for 100+ microservices across 3 regions. What tools and architecture would you suggest?
+2. Production app works fine for internal users but fails for external ones (403 error). How will you isolate the issue?
+3.
