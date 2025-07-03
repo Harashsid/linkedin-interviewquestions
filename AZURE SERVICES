@@ -2,3 +2,7 @@
 2.xplain how you’d use Azure Application Gateway with Web Application Firewall for a sensitive banking application.
 3. During an Azure deployment, you receive intermittent DNS resolution issues. What can be the causes?
 4.A user reports 10-second delays every 15 minutes in an app running on AKS. No code changes happened. How would you begin RCA?
+5.An Azure function is being throttled. How will you detect and fix it?
+6.Define a plan for blue/green deployment with rollback on Azure using Terraform and pipelines.
+7.Explain the difference in scaling strategies for compute-intensive vs I/O-intensive workloads in Azure.
+8.
