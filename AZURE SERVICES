@@ -1,1 +1,4 @@
-
+1.How do you ensure secure and dynamic secret rotation in Azure DevOps pipelines?
+2.xplain how you’d use Azure Application Gateway with Web Application Firewall for a sensitive banking application.
+3. During an Azure deployment, you receive intermittent DNS resolution issues. What can be the causes?
+4.A user reports 10-second delays every 15 minutes in an app running on AKS. No code changes happened. How would you begin RCA?
