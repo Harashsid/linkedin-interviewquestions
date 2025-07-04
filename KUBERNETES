@@ -1,3 +1,77 @@
 
-1.How would you set up an automated rollback strategy in Kubernetes for failed deployments?
-2.
+1. Your pod keeps getting stuck in CrashLoopBackOff, but logs show no errors. How would you approach debugging and resolution?
+
+2. You have a StatefulSet deployed with persistent volumes, and one of the pods is not recreating properly after deletion. What could be the reasons, and how do you fix it without data loss?
+
+3. Your cluster autoscaler is not scaling up even though pods are in Pending state. What would you investigate?
+
+4. A network policy is blocking traffic between services in different namespaces. How would you design and debug the policy to allow only specific communication paths?
+
+5. One of your microservices has to connect to an external database via a VPN inside the cluster. How would you architect this in Kubernetes with HA and security in mind?
+
+6. You're running a multi-tenant platform on a single EKS cluster. How do you isolate workloads and ensure security, quotas, and observability for each tenant?
+
+7. You notice the kubelet is constantly restarting on a particular node. What steps would you take to isolate the issue and ensure node stability?
+
+8. A critical pod in production gets evicted due to node pressure. How would you prevent this from happening again, and how do QoS classes play a role?
+
+9. You need to deploy a service that requires TCP and UDP on the same port. How would you configure this in Kubernetes using Services and Ingress?
+
+10. An application upgrade caused downtime even though you had rolling updates configured. What advanced strategies would you apply to ensure zero-downtime deployments next time?
+
+11. Your service mesh sidecar (e.g., Istio Envoy) is consuming more resources than the app itself. How do you analyze and optimize this setup?
+
+12. You need to create a Kubernetes operator to automate complex application lifecycle events. How do you design the CRD and controller loop logic?
+
+13. Multiple nodes are showing high disk IO usage due to container logs. What Kubernetes features or practices can you apply to avoid this scenario?
+
+14. Your Kubernetes cluster's etcd performance is degrading. What are the root causes and how do you ensure etcd high availability and tuning?
+
+15. You want to enforce that all images used in the cluster must come from a trusted internal registry. How do you implement this at the policy level?
+
+16. You're managing multi-region deployments using a single Kubernetes control plane. What architectural considerations must you address to avoid cross-region latency and single points of failure?
+
+17. During peak traffic, your ingress controller fails to route requests efficiently. How would you diagnose and scale ingress resources effectively under heavy load?
+18. How do you drain a Kubernetes node without downtime?
+19. What causes pod crashes only on new autoscaled nodes?
+20. How do you securely manage secrets across environments?
+21. HPA is not scaling under load. Why?
+22. How do you debug pod-to-pod network flakiness?
+23. How do you isolate teams in a shared cluster?
+24. What’s your strategy for backing up PostgreSQL/Kafka in K8s?
+25.What broke after a Kubernetes upgrade?
+26.What happens in the background when you run "kubectl apply -f pod?
+27. How will you troubleshoot when a pod returns with an OOM (Out Of Memory) error?
+28.You’re getting a CrashLoopBackOff error so what steps will you take to troubleshoot it? 29.What does an ImagePullBackOff error mean, and how do you resolve it?
+30. What types of Kubernetes upgrade strategies do you know? When should each one be used? Explain with respect to cost optimization and minimizing downtime.
+31.How will you troubleshoot when users face latency in the pod?
+
+32. You are the DevOps engineer handling production. The application works fine locally, but users complain of downtime. What steps will you take to troubleshoot this?
+33.Let’s say your application is deployed on Kubernetes. What happens in the background when a user clicks the login button? Describe how the request flows through the Kubernetes components.
+34.How does Kubernetes determine that a readiness probe is ready to take the traffic?
+35. How do you prevent noisy neighbors?
+36.Can you roll out config changes without restarting pods?
+37. Do you know about taints and tolerations? If so, how are they used?
+38.What are the use cases of ConfigMaps and Secrets? Can we attach them as volumes?
+39. How does RBAC work? How does it connect with the user?
+40. How do you give permissions to cluster-scoped resources? Which one is used?
+41. What are health probes? Explain what they do exactly.
+42.What are Kubernetes volumes and how do they work
+43.What are storage classes in Kubernetes?
+44.What is Ingress? Why is it used? Explain its workflow.
+45. What do you mean by headless service? 
+46.pod is stuck in CrashLoopBackOff, but the logs don’t show any errors. Where would you start debugging?
+47.StatefulSet pod with a persistent volume isn’t coming back after deletion. How would you recover it without risking data loss?
+48.The cluster autoscaler isn’t scaling up, even though some pods are in a Pending state. What would you check to understand why?
+49.A network policy is unintentionally blocking traffic between services in different namespaces. How would you design and debug it to allow only the right communication paths?
+50.One of your microservices needs to connect to an external database through a VPN inside the cluster. What would your architecture look like to ensure security and high availability?
+51.You’re running a multi-tenant platform on a single EKS cluster. How do you isolate workloads and enforce quotas, security, and observability for each tenant?
+52.The kubelet is restarting frequently on a specific node. How would you isolate the issue and stabilize the node?
+53.A critical pod in production got evicted due to node pressure. How can you prevent this from happening again? And how do Kubernetes QoS classes factor in?
+54.You need to deploy a service that requires both TCP and UDP on the same port. How would you configure this correctly in Kubernetes?
+55.An application upgrade caused downtime, even though you had rolling updates enabled. What would you do differently to ensure truly zero-downtime deployments?
+56. You’ve deployed an app to Azure Kubernetes Service (AKS) and it fails health checks randomly. How do you debug this end-to-end?
+57.  In a canary deployment to production, half the traffic returns 502, while others succeed. Walk us through your troubleshooting approach.
+58.  You see high CPU usage in one pod, but logs look clean. What next?
+59. What’s your approach to disaster recovery for stateful apps running on containers?
+60. What in Pod Disruption Budget (PDB) in K8s?
