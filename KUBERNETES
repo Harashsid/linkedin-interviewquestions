@@ -75,3 +75,14 @@
 58.  You see high CPU usage in one pod, but logs look clean. What next?
 59. What’s your approach to disaster recovery for stateful apps running on containers?
 60. What in Pod Disruption Budget (PDB) in K8s?
+61.How does DNS resolution work inside a pod?
+62. What does the Kubernetes controller manager do during a Deployment?
+63.What happens when a node with local emptyDir volumes gets scaled down?
+64.After a deployment, 30% of users report slow response times?
+65.How do you enforce runtime security in Kubernetes?
+66.HPA vs VPA vs Karpenter — when do you NOT use each?
+→ Bonus:
+How would you simulate HPA behavior in staging without real traffic?
+67.Tell me about the last Kubernetes outage you debugged.
+
+
