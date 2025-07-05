@@ -1,3 +1,11 @@
 1.Jenkins jobs are randomly failing at the artifact upload step. What layers would you check?
 2.Suppose your production pipeline is blocked due to missing approvals and stakeholders are unreachable. What will you do?
+How do you implement pipeline validation and prevent accidental deployments to production?
+	What’s the difference between runtime expressions and compile-time expressions in YAML pipelines?
+	How do you conditionally trigger jobs based on branch name or file path?
+	Explain how pipeline artifacts differ from build artifacts.
+ 	How is SonarQube integrated into your pipeline? How do you set up Quality Gates?
+	Explain code smell vs. code coverage.
+	How do Shared Libraries work in Jenkins?
+	Common errors in CI/CD pipelines? How do you troubleshoot them?
 
