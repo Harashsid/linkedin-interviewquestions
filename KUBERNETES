@@ -84,5 +84,23 @@
 → Bonus:
 How would you simulate HPA behavior in staging without real traffic?
 67.Tell me about the last Kubernetes outage you debugged.
+  How do you handle pod eviction during node maintenance in AKS?
+	What are taints and tolerations, and when would you use them?
+	How do you configure pod affinity rules to ensure certain workloads run on the same node?
+	Deployment vs. StatefulSet – When to use which?
+	How does the Kubernetes Scheduler work?
+	Basic folder structure of a Helm chart. What commands do you use to deploy with Helm?
+	What’s the impact of setting aggressive liveness probes — how can it lead to cascading failures?
+	Why use Kubernetes over standalone containers in production?
+	How would you troubleshoot CrashLoopBackOff?
+	How do you expose an app externally in Kubernetes?
+	Explain the basic structure of a Service Mesh (Istio/others) for microservices.
+	Your pod is in CrashLoopBackOff. There’s no useful log output. What next?
+        You deployed a new version. Latency spiked. No errors. What now?
+	You’re paged at 2 AM: 503s on the main app, but infra looks fine?
+        Your cost just spiked 3x in 24 hours
+	A secret was leaked in a public container image.
+	The entire dev team lost access to the cluster. Prod is unaffected.
+        A rollout failed, your app is now unstable — Helm hooks block rollback.
 
 
