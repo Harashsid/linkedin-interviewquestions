@@ -5,4 +5,6 @@
 5.An Azure function is being throttled. How will you detect and fix it?
 6.Define a plan for blue/green deployment with rollback on Azure using Terraform and pipelines.
 7.Explain the difference in scaling strategies for compute-intensive vs I/O-intensive workloads in Azure.
-8.
+8.How do you configure service-to-service authentication in Azure using managed identities?
+	Explain the use of Azure Bastion and when it’s preferred over jumpboxes.
+	How do you set up auto-scaling rules based on custom metrics in Azure Monitor?
