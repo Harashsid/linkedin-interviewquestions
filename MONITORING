@@ -1,1 +1,4 @@
 1.How would you monitor end-to-end SLA for services involved in a payments pipeline?
+A service goes down and logs are missing — how do you troubleshoot it?
+	What is your alert escalation policy design during off-hours?
+	How do you visualize metrics and set alerts using Prometheus + Grafana for AKS?
