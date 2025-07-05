@@ -1,1 +1,11 @@
-
+What AWS services have you worked with?
+Tell me about a recent task you performed using EC2.
+How would you troubleshoot latency issues in an application deployed on EC2?
+Explain IAM roles and policies. Can you create a custom policy? How?
+How do NACLs differ from Security Groups?
+If a Security Group allows HTTP (port 80) inbound but the NACL denies it, will the request reach the EC2 instance?
+If an app fails despite an open Security Group, what would you check next?
+Critical files were deleted from an S3 bucket. How could this have been prevented? How would you recover them?
+How would you optimize rising S3 costs without deleting data?
+When would you use Lambda over EC2, and vice versa?
+CloudWatch vs. CloudTrail – Key differences?
