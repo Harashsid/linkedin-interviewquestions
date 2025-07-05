@@ -1,1 +1,5 @@
 
+Write a Bash script to restart only the failed pods in a specific Kubernetes namespace.
+	Check disk space?
+	Count lines in a file?
+	Download files from the internet?
