@@ -1,1 +1,5 @@
 1.How do you handle zero-downtime database migrations in a distributed applications?
+2.DB migration without downtime? Explain rollback contingency
+How would you implement zero-downtime database migrations in a high-traffic production environment?
+Architect a logging strategy that handles 1TB+ daily logs while maintaining sub-second query performance
+
