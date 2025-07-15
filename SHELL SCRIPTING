@@ -3,3 +3,4 @@ Write a Bash script to restart only the failed pods in a specific Kubernetes nam
 	Check disk space?
 	Count lines in a file?
 	Download files from the internet?
+Bash: Find all .log files over 500MB modified in the last 48h
