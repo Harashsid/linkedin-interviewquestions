@@ -1,1 +1,4 @@
+Dockerfile: Multi-stage image with caching and minimized attack surface
+How do you manage vulnerability scanning and patching in high-frequency deployments?
+Walk through your incident response process for a potential supply chain attack in your container registry
 
