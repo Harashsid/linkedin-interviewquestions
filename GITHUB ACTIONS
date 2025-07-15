@@ -8,4 +8,21 @@ How do you implement pipeline validation and prevent accidental deployments to p
 	Explain code smell vs. code coverage.
 	How do Shared Libraries work in Jenkins?
 	Common errors in CI/CD pipelines? How do you troubleshoot them?
+Explain your entire CI/CD, where’s the blast radius?
+ Secure Vault secrets in GitHub Actions without hardcoding
+How do you create reusable pipeline templates that support dynamic service onboarding?
+ What’s your approach to parallelizing 100+ unit/integration tests in a data-heavy build pipeline?
+ Explain how to securely pass secrets between self-hosted runners and cloud pipelines.
+ How do you enforce code quality checks (lint, scan, format) without slowing down PR cycles?
+How do you monitor and respond to privilege escalation attempts within CI/CD agents?
+  What is your security approach to running third-party GitHub Actions or pipeline extensions?
+How do you structure GitHub Actions workflows to support multi-service deployment with rollback?
+Explain how to perform canary deployments using Helm and Argo Rollouts.
+How do you securely inject API keys in GitHub Actions without exposing them in logs?
+ What’s the most efficient way to implement release versioning across microservices?
+What’s your strategy for enforcing least privilege access in a CI/CD pipeline?
+Architect a CI/CD pipeline that handles 1000+ deployments per day across 50+ microservices
+Design a zero-trust security model for a CI/CD pipeline handling PCI-compliant applications
+
+
 
