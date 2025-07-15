@@ -11,3 +11,15 @@ What’s your approach to building actionable alerts and reducing false positive
  How would you implement distributed tracing in a Kubernetes-based microservices system?
 Your monitoring shows everything is “green” but customers are complaining. How do you identify and fix the blind spots?
 How do you implement progressive delivery with automated rollback based on business KPIs, not just technical metrics
+what are the sources of getting incidents
+2.What is the usage of datadog, and how to application service onbaording
+3.How to check Application health checks
+4.how to check server health status
+5.how to check impact of the issues
+6.How to handle P1 incidents
+7.what is CR , How to implement changes
+8.Have you attended cab calls
+9,. Have you created reports
+10.If incidents are raising same, what action you will take.
+11.What is Escalation matrix
+12.Do you have knowledge on AWS cloud
