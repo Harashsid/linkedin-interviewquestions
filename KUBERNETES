@@ -102,5 +102,40 @@ How would you simulate HPA behavior in staging without real traffic?
 	A secret was leaked in a public container image.
 	The entire dev team lost access to the cluster. Prod is unaffected.
         A rollout failed, your app is now unstable — Helm hooks block rollback.
+How does CoreDNS handle plugin chain resolution
+Roll back a failed Helm release. What’s your exact command chain?
+Node is Ready, but kubelet logs are silent. What now?
+A prod pod restarts 8 times/hour. Logs look fine. What’s your triage plan?
+Secure gRPC traffic across K8s namespaces
+Helm worked in staging but broke in prod. Explain the failure class.
+How do you debug intermittent network drops between services inside a Kubernetes cluster?
+ What is your process to test a new ingress rule before applying it globally in production?
+ How do you configure Kubernetes audit logs to detect unauthorized API requests?
+ In what scenarios would you isolate workloads using Kubernetes RuntimeClasses?
+ How do you integrate policy-as-code (OPA/Conftest) with Terraform to enforce security rules?
+ What’s the difference between Terraform import, taint, and state mv — and when would you use each?
+ How do you handle state locking conflicts in a remote Terraform team setup?
+ How would you manage feature-specific infrastructure branches without environment drift?
+Your pod keeps getting stuck in CrashLoopBackOff, but logs show no errors. How would you approach debugging and resolution?
+You have a StatefulSet deployed with persistent volumes, and one of the pods is not recreating properly after deletion. What could be the reasons, and how do you fix it without data loss?
+Your cluster autoscaler is not scaling up even though pods are in Pending state. What would you investigate?
+ A network policy is blocking traffic between services in different namespaces. How would you design and debug the policy to allow only specific communication paths?
+One of your microservices has to connect to an external database via a VPN inside the cluster. How would you architect this in Kubernetes with HA and security in mind?
+You're running a multi-tenant platform on a single EKS cluster. How do you isolate workloads and ensure security, quotas, and observability for each tenant?
+You notice the kubelet is constantly restarting on a particular node. What steps would you take to isolate the issue and ensure node stability?
+A critical pod in production gets evicted due to node pressure. How would you prevent this from happening again, and how do QoS classes play a role?
+You need to deploy a service that requires TCP and UDP on the same port. How would you configure this in Kubernetes using Services and Ingress?
+An application upgrade caused downtime even though you had rolling updates configured. What advanced strategies would you apply to ensure zero-downtime deployments next time?
+Your service mesh sidecar (e.g., Istio Envoy) is consuming more resources than the app itself. How do you analyze and optimize this setup?
+You need to create a Kubernetes operator to automate complex application lifecycle events. How do you design the CRD and controller loop logic?
+Multiple nodes are showing high disk IO usage due to container logs. What Kubernetes features or practices can you apply to avoid this scenario?
+Your Kubernetes cluster's etcd performance is degrading. What are the root causes and how do you ensure etcd high availability and tuning?
+You want to enforce that all images used in the cluster must come from a trusted internal registry. How do you implement this at the policy level?
+You're managing multi-region deployments using a single Kubernetes control plane. What architectural considerations must you address to avoid cross-region latency and single points of failure?
+ During peak traffic, your ingress controller fails to route requests efficiently. How would you diagnose and scale ingress resources effectively under heavy load?
+Your Kubernetes cluster is experiencing cascading failures during peak traffic. Walk through your troubleshooting methodology
+Design a deployment strategy for a legacy monolith that can’t have downtime but needs to migrate to microservices
+How do you handle secrets rotation for 500+ services without causing outages?
+How do you implement chaos engineering in production without customer impact?
 
 
