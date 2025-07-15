@@ -135,6 +135,7 @@ You're managing multi-region deployments using a single Kubernetes control plane
  During peak traffic, your ingress controller fails to route requests efficiently. How would you diagnose and scale ingress resources effectively under heavy load?
 Your Kubernetes cluster is experiencing cascading failures during peak traffic. Walk through your troubleshooting methodology
 Design a deployment strategy for a legacy monolith that can’t have downtime but needs to migrate to microservices
+You deploy on Friday afternoon and traffic drops 30% with no error alerts. Your CEO is asking questions. What’s your investigation process?
 How do you handle secrets rotation for 500+ services without causing outages?
 How do you implement chaos engineering in production without customer impact?
 
