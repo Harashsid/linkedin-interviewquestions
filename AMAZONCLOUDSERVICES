@@ -9,3 +9,16 @@ Critical files were deleted from an S3 bucket. How could this have been prevente
 How would you optimize rising S3 costs without deleting data?
 When would you use Lambda over EC2, and vice versa?
 CloudWatch vs. CloudTrail – Key differences?
+Difference between ALB and NLB, when does latency matter more than routing logic?
+hoose between EBS, EFS, and FSx for different workloads
+Your autoscaler doubled the infrastructure costs. Logs are normal. What do you check?
+S3 bucket deleted by mistake, walk me through infra + IAM prevention
+How do you ensure that secrets used by a job running in a container are never logged or persisted?
+ What’s the difference between Key Vault, Secret Manager, and Parameter Store — and when to choose what?
+ How would you handle CPU throttling in a busy AKS/EKS cluster under payment traffic load?
+ What are readiness gates in Kubernetes and when would you use them?
+ Explain how you’d debug an issue where the HPA is not scaling pods despite high CPU usage.
+ How do you ensure blue-green or shadow deployment testing for critical services?
+Design a multi-region disaster recovery strategy for a microservices architecture with RPO < 1 hour and RTO < 15 minutes
+Design a cost optimization strategy that reduced cloud spend by 40% without impacting performance
+Design an autoscaling strategy that handles Black Friday traffic (10x normal load) while maintaining cost efficiency
