@@ -69,3 +69,8 @@ File System & Storage
 34. Your df -h and dush show different disk usage. Why?
 
 35. How do you find out which directory is consuming the most in /var?
+
+Disaster recovery setup, what does it look like? When was it last tested?
+Simulate a DNS outage with the CoreDNS plugin misorder. how?
+App returns 200 OK, but functionality is broken. What did you monitor?
+
