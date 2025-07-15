@@ -3,5 +3,13 @@ How do you safely refactor Terraform code in production environments?
 What are data blocks in Terraform and when are they required?
 How would you store and manage Terraform state files in a team environment?
 Explain dynamic blocks, resources vs. modules, and data blocks in Terraform.
-What happens if you lose the Terraform state file? Or access to the remote backend?
+What happens if you lose the Terraform state file? Or access to the re
+mote backend?
 Difference between terraform validate and terraform fmt?
+ Terraform taint vs terraform state rm, when would you use either?
+Terraform drift detected. Who gets paged, and what’s the fix sequence?
+ How do you structure Terraform code for a multi-region, multi-account AWS setup?
+ What is your approach to tagging and cost governance across cloud infrastructure?
+ How do you rotate AWS IAM credentials and ensure services update them dynamically?
+ What’s the benefit of using for_each over count in complex Terraform modules?
+How do you implement policy-as-code that prevents misconfigurations before they reach production?
