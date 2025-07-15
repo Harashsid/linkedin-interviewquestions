@@ -2,3 +2,12 @@
 A service goes down and logs are missing — how do you troubleshoot it?
 	What is your alert escalation policy design during off-hours?
 	How do you visualize metrics and set alerts using Prometheus + Grafana for AKS?
+How do you trace bottlenecks in a distributed ETL job running across containerized services?
+ What’s your observability stack for detecting anomalies in Spark or Flink-based workloads?
+ How would you build an SLO-based alerting system for a data pipeline that ingests financial transactions?
+ How do you differentiate between a transient data lag vs. a systemic pipeline failure?
+ How do you trace a spike in failed transactions to either app logic, infra failure, or a third-party API?
+What’s your approach to building actionable alerts and reducing false positives in PagerDuty/Prometheus?
+ How would you implement distributed tracing in a Kubernetes-based microservices system?
+Your monitoring shows everything is “green” but customers are complaining. How do you identify and fix the blind spots?
+How do you implement progressive delivery with automated rollback based on business KPIs, not just technical metrics
