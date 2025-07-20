@@ -138,5 +138,131 @@ Design a deployment strategy for a legacy monolith that can’t have downtime bu
 You deploy on Friday afternoon and traffic drops 30% with no error alerts. Your CEO is asking questions. What’s your investigation process?
 How do you handle secrets rotation for 500+ services without causing outages?
 How do you implement chaos engineering in production without customer impact?
+How would you design and implement a secure and scalable CI/CD pipeline from code commit to production deployment?
+ Describe a time when you resolved a production outage quickly. What was your approach and how did you ensure minimal impact to end users?
+ Your Kubernetes HPA (Horizontal Pod Autoscaler) is not scaling down even when CPU usage is low. What could be the root causes?
+ You are required to perform maintenance on a node without causing service disruption. How would you safely drain the node and ensure high availability?
+ Explain the differences between canary deployments and blue/green deployments. When would you prefer one over the other?
+ How do you enforce resource quotas, image scanning, and prevent the creation of certain Kubernetes services in production?
+ How would you manage application rollouts across multiple Kubernetes clusters in different environments?
+ A pod in production is being OOMKilled frequently. How do you identify the root cause and prevent future occurrences?
+ Your Kubernetes cluster’s autoscaler is launching too many nodes during peak hours, causing budget concerns. How do you control autoscaling more efficiently?
+ You are designing a multi-region Kubernetes disaster recovery strategy for a regulated enterprise. How do you plan backup, failover, and restoration?
+ Most DevOps candidates freeze when asked about real disasters they’ve never faced.
+You deploy on Friday afternoon and traffic drops 30% with no error alerts. Your CEO is asking questions. What’s your investigation process?
+→ Check recent deployments - rollback immediately if suspicious
+→ Verify load balancer health and routing rules
+→ Monitor database connections and query performance
+→ Check CDN and cache hit rates
+→ Review third-party API dependencies and response times
+→ Analyze traffic patterns by geography and user segments
+→ Look for silent failures in application logs
+
+👉 Design a backup strategy for a distributed database that processes 50TB daily while maintaining ACID compliance across regions.
+
+→ Use database-native backup tools for consistent snapshots
+→ Implement continuous WAL shipping between regions
+→ Schedule full backups during maintenance windows
+→ Test point-in-time recovery monthly with real scenarios
+→ Maintain 3-2-1 backup rule across different storage tiers
+→ Monitor backup completion and validate integrity automatically
+→ Document RTO/RPO requirements for each failure scenario
+
+👉 Your entire CI/CD pipeline was compromised and malicious code reached production. Walk through your containment and recovery plan.
+
+→ Immediately disable all CI/CD systems and deployment processes
+→ Isolate affected production systems from network traffic
+→ Rollback to last verified clean deployment
+→ Scan production infrastructure for compromise indicators
+→ Rotate all secrets, API keys, and deployment credentials
+→ Notify incident response team and legal/compliance
+→ Preserve forensic evidence and audit logs
+
+👉 Implement a deployment freeze process that can halt 200+ simultaneous deployments across teams within 60 seconds.
+
+→ Central API service that all deployment tools must check before proceeding
+→ Feature flag system with global emergency kill switch
+→ Automated Slack/email notifications to all teams
+→ Override mechanism for critical security patches only
+→ Real-time dashboard showing freeze status and affected deployments
+→ Clear escalation path and approval process for freeze decisions
+→ Audit logging for all freeze events and overrides
+
+👉 Design a resource allocation strategy where dev environments cost 80% less than production but maintain realistic testing conditions.
+
+→ Use auto-scaling with lower limits and smaller instance types
+→ Implement environment scheduling - auto-shutdown evenings/weekends
+→ Share databases across teams with isolated schemas
+→ Use data sampling instead of full production datasets
+→ Leverage spot instances for non-critical testing workloads
+→ Container orchestration for better resource utilization
+→ Monitor and alert on dev environment cost overruns
+1. You deployed a StatefulSet for a database cluster, but all pods try to connect to the same storage volume. What’s wrong, and how do you fix it?
+2. You need to ensure that a job runs at 2 a.m. every day in Kubernetes. How would you do it?
+3. You’re asked to allow a specific team to only create pods in a single namespace but not delete them. How would you design the RBAC?
+4. A deployment is supposed to maintain 5 replicas, but only 3 are running. How would you diagnose the issue?
+5. You want to ensure that only pods with a certain label can talk to your backend service. How would you implement this?
+6. The CPU usage of your app suddenly spikes, and autoscaling isn’t kicking in. Where do you start debugging?
+7. You need to ensure that your production workloads don’t run on preemptible or spot nodes. How do you configure this in your cluster?
+8. Your developers want to test against production data safely. How do you enable that in a secure, isolated way?
+9. You’re seeing a high number of CrashLoopBackOff events. How would you approach debugging them?
+10. An application deployment is successful, but readiness probes keep failing. What are your next steps?
+11. You want to expose your internal app to the internet using HTTPS with a custom domain. What’s your approach?
+12. You’re seeing DNS resolution delay for services inside the cluster. How do you identify the cause?
+13. You want to enforce that all containers have resource limits and requests defined. How do you do that?
+14. Your cluster is under heavy load. You want to prioritize critical pods over low-priority ones. How do you do this in Kubernetes?
+15. You need to drain a node for maintenance but want to ensure zero downtime for the services running. How do you plan this?
+16. One of your containers is stuck in Terminating state for a long time. How do you troubleshoot and force stop it?
+17. You want to deploy a pod that can access AWS S3 without using hardcoded credentials or secrets. What’s your approach?
+18. You see that logs from certain pods are missing in your central logging system. What could be wrong?
+19. A team pushed a config that caused downtime across services. How would you implement safeguards to prevent this in the future?
+20. A pod needs to mount a file from a Git repo at startup. What are your options?
+21. You need to deploy an application across multiple clusters with different configurations. How would you manage that?
+22. You’ve enabled Horizontal Pod Autoscaler, but it doesn't scale down even after CPU usage drops. What could be causing it?
+23. A pod takes 2 minutes to start due to initialization logic. How can you stop Kubernetes from marking it as unhealthy?
+24. A container exits silently without writing anything to logs. How can you gather more info about its lifecycle?
+1. You deploy a Pod, but it remains in Pending state. What steps do you take to troubleshoot?
+
+2. How would you ensure high availability for your application running in Kubernetes?
+
+3. You need to run a one-time database migration before your app starts. How do you implement that in Kubernetes?
+
+4. Explain how Kubernetes handles service discovery internally. How would you troubleshoot service DNS issues?
+
+5. You want to deploy an app that requires persistent data. How would you provision storage? What options do you have?
+
+6. A service is not accessible from outside the cluster. How would you debug it step-by-step?
+
+7. You want internal microservices to communicate securely over TLS. How would you design this in Kubernetes?
+
+8. How do you restrict a certain pod from accessing the internet, but allow internal cluster traffic?
+
+9. Your app uses a database outside Kubernetes, and the connection randomly fails. How do you isolate the issue?
+
+10. A pod cannot resolve a service name (my-db-service). What networking components would you check?
+
+11. You need to rotate secrets used by multiple pods with zero downtime. What’s your approach?
+
+12. An app fails because it can’t find an environment variable. How do you troubleshoot ConfigMap usage?
+
+13. You have different config values for dev, staging, and prod. How do you manage this with Kubernetes best practices?
+
+14. Your team accidentally committed secrets to Git. How do you handle secrets more securely in Kubernetes?
+
+
+15. How do you inject configuration dynamically without restarting pods?
+16. You want to give read-only access to logs for a team. How do you configure RBAC?
+17. A container image has a known CVE vulnerability. How do you enforce using only scanned/trusted images?
+18. You need to allow only specific pods to pull images from a private registry. How do you do this securely?
+19. A developer created a service account that can delete resources cluster-wide. How do you detect and restrict such actions?
+20. You want to audit who accessed which Kubernetes resources. What features do you enable?
+21. You deployed a new version of your app and users report 500 errors. What is your rollback strategy?
+22. You need zero-downtime deployments with rollback support. Which Kubernetes features help you achieve that?
+23. Your app is slow under load. How do you configure autoscaling properly (both HPA and VPA)?
+24. What steps would you take to canary deploy a new feature to only 10% of users?
+25. You want to control how many pods are unavailable during updates. How do you configure this?
+26. A node is in NotReady state. What might be the causes, and how do you fix it?
+27. You observe intermittent pod restarts. What logs and events would you look at to debug this?
+28. You have a memory leak in your app. How can you use Kubernetes features to mitigate the impact?
 
 
