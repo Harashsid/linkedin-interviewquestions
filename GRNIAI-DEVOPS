@@ -1,0 +1,41 @@
+
+1. How can GenAI tools be integrated into CI/CD pipelines to automate documentation or release notes?
+
+2. What are some real-world use cases of LLMs (Large Language Models) in DevSecOps practices?
+
+3. How do you leverage GenAI to optimize incident response workflows or postmortem analysis in SRE?
+
+4. Can GenAI assist in writing Infrastructure-as-Code (IaC)? How would you validate the generated code?
+
+5. Describe a way to integrate GenAI with GitOps for intelligent code reviews or pull request summaries.
+
+6. What are the security risks of using GenAI in automated DevOps processes and how would you mitigate them?
+
+7. Have you used GenAI to generate or troubleshoot Kubernetes manifests? What was your experience?
+
+8. How would you set up a GenAI-powered chatbot to assist developers with CI/CD build failures?
+
+9. What are the limitations of using LLMs for automating cloud configuration tasks (e.g., Terraform or ARM templates)?
+
+10. How can GenAI support automated root cause analysis (RCA) in observability platforms like Prometheus or Datadog?
+
+11. Explain how you would use GenAI to analyze and summarize large logs or monitoring data.
+
+12. What role can GenAI play in enhancing test automation strategies in a DevOps pipeline?
+
+13. How would you incorporate GenAI in a self-healing infrastructure approach?
+
+14. Can GenAI assist with cloud cost optimization recommendations? If yes, how would you integrate that into your CI/CD?
+
+15. What precautions would you take when using GenAI-generated scripts or configurations in a production environment?
+
+16. How can LLMs be used for learning and onboarding new DevOps engineers in your team?
+
+17. Have you used any GenAI-powered DevOps tools (like Cody, Amazon Q, or Copilot)? Share your review.
+
+18. How would you fine-tune an open-source LLM to support custom DevOps documentation generation?
+
+19. What is your opinion on using GenAI for dynamic compliance checks or policy generation (e.g., OPA or Sentinel)?
+
+20. Do you see GenAI as a threat or a partner in the future of DevOps automation? Why?
+
