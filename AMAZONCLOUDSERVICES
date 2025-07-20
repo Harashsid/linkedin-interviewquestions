@@ -22,3 +22,275 @@ How do you ensure that secrets used by a job running in a container are never lo
 Design a multi-region disaster recovery strategy for a microservices architecture with RPO < 1 hour and RTO < 15 minutes
 Design a cost optimization strategy that reduced cloud spend by 40% without impacting performance
 Design an autoscaling strategy that handles Black Friday traffic (10x normal load) while maintaining cost efficiency
+ How would you prevent developers from accidentally creating LoadBalancer services in a production environment?
+ Your monthly cloud bill is higher than expected, and you find unused volumes and load balancers. How do you track, clean, and prevent this?
+Q: Your EKS cluster can’t scale new pods due to insufficient IPs. How do you resolve this?
+A: The VPC’s CIDR block might be too small. I’d enable VPC CNI’s custom networking or add a secondary CIDR to increase the IP pool.
+Q: You launched an EC2 instance, but it’s stuck in the “pending” state. What’s going on?
+A: Could be an unavailable AMI or instance type in the AZ. I’d check if the AMI exists and if the AZ supports the instance type.
+Q: Your ALB is routing traffic unevenly across healthy targets. Why might that happen?
+A: The ALB’s load balancing algorithm might be session-based. I’d check if sticky sessions are enabled or if cross-zone load balancing is off, causing uneven distribution.
+Q: You’re using AWS Secrets Manager, but your application can’t retrieve the secret. What’s wrong?
+A: The app’s IAM role might lack “secretsmanager:GetSecretValue” permission, or the secret’s ARN is misconfigured in the code. I’d verify both.
+Q: Your SQS queue is piling up messages, but your Lambda consumer isn’t processing them. Why?
+A: The Lambda might not have an event source mapping to the SQS queue, or its IAM role lacks permission to read from the queue. I’d check both.
+Q: You’re getting “ThrottlingException” errors from a DynamoDB table during peak traffic. How do you handle it?
+A: I’d enable auto-scaling for the table’s read/write capacity or switch to on-demand mode to handle bursts without throttling.
+Q: Your EKS pods are crashing with “out of memory” errors. How do you troubleshoot?
+A: I’d check the pod’s resource limits in the deployment spec. If they’re too low or missing, I’d adjust CPU/memory requests and limits to match the workload.
+Q: You enabled MFA for an IAM user, but they can still log in without it. Why?
+A: The MFA policy might not be enforced. I’d ensure a policy requiring MFA is attached to the user or group and that it’s applied to the console login action.
+1. A client needs to deploy a financial trading platform that requires <1ms latency, geo-failover, and real-time analytics. How would you architect such a solution?
+2. Your SaaS application spans 100+ microservices, and customers demand per-tenant SLO guarantees. How would you implement SLA/SLO monitoring and enforcement at scale?
+3. A regulated enterprise wants to implement confidential computing for highly sensitive workloads on the cloud. Which services and architecture patterns would you recommend?
+4. You’re tasked with designing a zero-downtime blue/green deployment for a global Kubernetes application while ensuring database consistency. How would you do it?
+5. A company’s multi-cloud setup lacks centralized IAM governance, leading to inconsistent access policies. How would you enforce identity federation and governance?
+6. A critical app running in a Kubernetes cluster is affected by a pod evictions storm during scale-out events. How would you diagnose and redesign the cluster for resilience?
+7. Your architecture must support data sovereignty in the EU, but the workload also demands AI/ML models trained in the US. How do you legally and technically design this?
+8. The current CI/CD pipeline often introduces breaking changes to production. How would you design a robust GitOps pipeline with progressive delivery?
+9. A telecom operator wants to run 5G core network functions on the cloud using network slicing and edge compute. What’s your approach?
+10. A client wants to use custom encryption algorithms for data at rest and in transit while still using managed services. How would you support this securely?
+11. An existing app is being migrated to a serverless-first model, but current architecture has long-running synchronous processes. What changes are required?
+12. Your customer wants to run large-scale batch processing jobs, but at the same time maintain API-based real-time services on the same data. How do you design this?
+13. A defense customer requires a fully air-gapped cloud architecture with automated patching and threat detection. How do you ensure security and modernization?
+14. A multinational corporation needs decentralized teams to manage infrastructure as code, but with centralized compliance and guardrails. How do you manage this?
+15. Your cloud cost optimization efforts are being blocked by poor tagging and resource sprawl. What complete governance and remediation strategy would you implement?
+1. A global logistics firm wants to implement real-time shipment tracking with guaranteed low latency across continents. How would you architect it?
+
+
+2. A fintech company needs to process millions of transactions per day while meeting PCI-DSS compliance and minimizing latency. What cloud architecture would you design?
+
+
+3. You’re migrating a monolithic healthcare application to microservices in the cloud. How would you handle state, inter-service communication, and compliance?
+
+
+4. A large media company wants to stream high-definition video globally with minimal buffering. How would you architect for performance and scalability?
+
+
+5. Your client wants to implement disaster recovery for a mission-critical application with RTO < 5 mins and RPO = 0. What’s your approach?
+
+
+6. A B2B SaaS provider needs secure multi-tenancy in Azure or AWS. How would you design the architecture to isolate data while optimizing cost?
+
+
+7. A customer is facing intermittent database bottlenecks during peak loads. How would you identify the root cause and refactor the architecture?
+
+
+8. A banking institution requires a zero-trust architecture for all internal and external services. How would you implement this in a multi-cloud environment?
+
+
+9. A telecom provider needs to deploy a scalable AI-based recommendation engine in the cloud. What components and strategy would you use?
+
+
+10. You need to migrate petabytes of archival data from on-prem to the cloud without disrupting ongoing operations. What’s your step-by-step plan?
+
+
+11. An e-commerce company requires dynamic pricing based on real-time competitor analysis. How would you design this using cloud-native services?
+
+
+12. A startup is running all services in a single cloud region. How would you introduce geo-redundancy without incurring unnecessary cost?
+
+
+13. You’re designing a platform to support real-time fraud detection using machine learning. What services and data pipeline would you choose?
+
+
+14. A government agency mandates on-prem storage of classified data but wants to use cloud compute. How would you design this hybrid setup?
+
+
+15. A multinational wants centralized logging and compliance tracking across AWS, Azure, and GCP. How would you build this system?
+
+
+16. A SaaS product is struggling with tenant isolation due to shared DB architecture. How would you redesign for scalability and security?
+
+
+17. A critical application is receiving frequent timeout errors, but monitoring shows no CPU or memory pressure. How would you troubleshoot?
+
+
+18. Your client wants to deploy a multi-region, highly available Kubernetes cluster with seamless upgrades. What’s your plan?
+1. How do you architect a zero-downtime deployment strategy in the cloud?
+
+Scenario: Using blue-green deployments with load balancer switching in AWS Elastic Beanstalk.
+
+2. How do you manage drift in Infrastructure as Code?
+
+Scenario: Running terraform plan regularly and integrating drift detection in CI/CD pipelines.
+
+3. Describe your approach to monitoring distributed systems in the cloud.
+
+Scenario: Using Prometheus and Grafana for custom metrics and alerting in Kubernetes clusters.
+
+4. How do you handle log aggregation and retention in multi-account environments?
+
+Scenario: Centralizing logs in a shared CloudWatch Logs account with cross-account roles.
+
+5. How do you evaluate and adopt a new cloud service?
+
+Scenario: Conducting PoC, cost comparison, and testing service limits under simulated workloads.
+
+
+6. What techniques do you use to prevent cloud vendor lock-in?
+
+Scenario: Using Kubernetes for workload orchestration and abstracting storage with open-source tools.
+
+
+7. How do you design scalable APIs in the cloud?
+
+Scenario: API Gateway with Lambda backends and throttling policies for rate limiting.
+
+
+8. What considerations go into designing a cloud-native CI/CD platform?
+
+Scenario: Self-hosted runners on Kubernetes with isolated pipelines per microservice.
+
+
+9. Describe a cloud-native database design decision you made.
+
+Scenario: Choosing DynamoDB for a low-latency shopping cart with TTL and autoscaling.
+
+
+10. How do you ensure security in serverless functions?
+
+Scenario: Least privilege IAM roles, code scanning, and API Gateway usage with WAF.
+
+
+11. How do you architect SSO across cloud and on-prem systems?
+
+Scenario: Integrating Azure AD with custom SAML connectors and SCIM provisioning.
+
+
+12. What is your approach to managing cloud resources across environments (dev/test/prod)?
+
+Scenario: Using environment-specific Terraform workspaces and naming conventions.
+
+
+13. How do you enforce tagging policies for cloud governance?
+
+Scenario: Tag policies with AWS Organizations and Config Rules to enforce compliance.
+
+
+14. How do you validate cloud templates before deployment?
+
+Scenario: Using terraform validate and cfn-lint in pre-commit hooks.
+
+
+15. How do you architect a solution for real-time data streaming in cloud?
+
+Scenario: Kinesis Data Streams with Lambda consumers and Firehose delivery to S3.
+. Your client wants to implement a global SaaS platform with strict data residency requirements per region. How would you architect this using Azure or AWS?
+
+2. A business running on Kubernetes in the cloud experiences pod evictions due to resource limits. How do you redesign the cluster for reliability and scalability?
+
+3. A financial firm wants to run multi-region disaster recovery simulations with zero data loss. What cloud architecture will support this?
+
+4. A retail enterprise is migrating to microservices but lacks a unified identity management layer. How would you implement secure identity federation across services?
+
+5. A logistics app needs real-time vehicle tracking and alerting with millions of messages per hour. How would you architect the ingestion and alert pipeline?
+
+6. A large bank wants to host private APIs on the cloud accessible only from internal VPCs and partner networks. How would you ensure security and high availability?
+
+7. You’re asked to design a unified logging and SIEM pipeline across Azure, AWS, and GCP. What architecture would you propose?
+
+8. A SaaS company serving 100K+ tenants wants full tenant isolation, custom scaling, and usage-based billing. What multi-tenant cloud design do you suggest?
+
+9. You find inconsistent resource tagging across 12 cloud subscriptions, impacting cost and governance. How do you enforce tagging and automate compliance?
+
+10. A government client wants to run confidential workloads in the public cloud with TPM/HSM level encryption. How would you meet this requirement?
+
+11. The CTO wants to modernize 300+ on-prem apps over 18 months using a phased approach. How would you roadmap and prioritize this transformation?
+
+12. A customer wants to run real-time fraud detection using AI/ML in their existing payment system. How do you integrate it with minimal impact?
+
+13. A telecom firm requires 5G network slicing support integrated with cloud workloads. What’s your approach to edge computing in this scenario?
+
+14. You inherit a poorly documented IaC repository spanning Terraform, ARM templates, and Bicep. What’s your strategy to standardize and refactor it?
+
+15. The security team needs audit trails and tamper-proof logs for critical cloud apps. How do you implement immutable logging and forensic readiness?
+. How would you implement Infrastructure as Code (IaC) in a cloud environment?
+
+Scenario: Using Terraform to manage AWS resources, enabling version control and reusable configurations.
+
+
+2. Describe your approach to cost optimization in cloud solutions.
+
+Scenario: Using AWS Cost Explorer to identify underutilized resources and implement right-sizing.
+
+
+3. Can you explain a scenario where you utilized microservices, and why it was the right choice?
+
+Scenario: Migrating a monolithic e-commerce platform to microservices to enable independent scaling and deployment.
+
+
+4. How would you ensure data security in a multi-tenant cloud environment?
+
+Scenario: Tenant isolation with separate VPCs and encryption at rest and in transit.
+
+
+5. How do you go about designing a disaster recovery plan in the cloud?
+
+Scenario: Cross-region replication, backup scheduling, and DR drills.
+
+
+6. How do you utilize DevOps practices in a cloud environment?
+
+Scenario: CI/CD pipelines with Jenkins and GitHub Actions for automated deployment and rollback.
+
+
+7. Describe a trade-off you made between performance and cost in a cloud solution.
+
+Scenario: Using spot instances for non-critical workloads while reserving instances for production.
+
+
+8. How do you ensure compliance with data residency laws?
+
+Scenario: Deploying workloads in specific regions and configuring access via IAM roles.
+
+
+9. Designing for fault tolerance and high availability in cloud solutions?
+
+Scenario: Auto-scaling groups, load balancers, and health checks across availability zones.
+
+
+10. How did you use analytics in a cloud architecture project?
+
+Scenario: Centralizing logs with ELK Stack and using insights to reduce response time.
+
+
+11. What’s your approach to capacity planning in cloud systems?
+
+Scenario: Monitoring resource utilization and forecasting with CloudWatch and Azure Monitor.
+
+
+12. How do you leverage serverless computing in architecture design?
+
+Scenario: AWS Lambda for background tasks, reducing maintenance effort and cost.
+
+
+13. How did you handle a cloud security breach?
+
+Scenario: Revoked compromised keys, enforced MFA, and audited IAM roles.
+
+
+14. Describe a complex architecture you designed and why.
+
+Scenario: A hybrid multi-cloud with on-prem failover using VPNs and secure peering.
+
+
+15. How did you lead a major cloud migration project?
+
+Scenario: Phased lift-and-shift, ensuring performance testing and rollback plans.
+
+
+16. Describe a scenario with multi-region deployment.
+
+Scenario: Using Route 53 latency routing and RDS read replicas across regions.
+
+
+17. What is your process for version-controlling infrastructure?
+
+Scenario: GitOps with Terraform modules stored in Git repositories.
+
+
+18. How do you manage secrets in your cloud deployments?
+
+Scenario: AWS Secrets Manager with IAM-based access.
+
