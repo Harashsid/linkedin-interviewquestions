@@ -23,6 +23,41 @@ How do you securely inject API keys in GitHub Actions without exposing them in l
 What’s your strategy for enforcing least privilege access in a CI/CD pipeline?
 Architect a CI/CD pipeline that handles 1000+ deployments per day across 50+ microservices
 Design a zero-trust security model for a CI/CD pipeline handling PCI-compliant applications
+ny DevOps tool you’ve worked with and explain its most common failure modes in production. How do you mitigate them?
+ Describe a task or workflow you intentionally chose not to automate. Why did you make that decision?
+ How do you ensure fast and safe rollback in your CI/CD deployments when a release causes issues?
+ A recent CI/CD job left orphaned resources in your cluster. What measures can you take to avoid such inconsistencies?
+ How do you maintain auditability and compliance across your CI/CD pipelines, especially in enterprise or financial environments?
+ 1. How does GitHub Actions work and how do you create a custom workflow?
+2. What is the difference between git pull and git fetch in a GitHub repo context?
+3. How can you resolve a merge conflict in GitHub?
+4. Explain the concept of GitHub forks vs. branches.
+5. How do you enforce protected branches and what is their purpose?
+6. How can you trigger a GitHub Action only when code is pushed to a specific folder?
+7. What is the .github directory used for in repositories?
+8. How do you use GitHub CLI and what are its real-world benefits?
+9. What is the difference between GitHub Projects and GitHub Issues?
+10. How do you manage secrets in GitHub Actions securely?
+11. What are GitHub Environments and how do they differ from branches?
+12. How would you rollback a release deployed via GitHub Actions?
+13. How do GitHub Codespaces help in faster development onboarding?
+14. What’s the difference between squash merge, rebase, and regular merge on GitHub?
+15. How do you set up branch rules for CI/CD pipelines using GitHub Actions?
+1. How do you handle secrets rotation dynamically in GitHub Actions without exposing credentials?
+2. Explain how matrix builds work in GitHub Actions and when to use them.
+3. How do you implement monorepo CI/CD with GitHub Actions while minimizing unnecessary job runs?
+4. Describe a secure GitOps workflow using GitHub and ArgoCD.
+5. How would you set up end-to-end testing across microservices using GitHub Actions workflows?
+6. How do you audit GitHub enterprise repositories for compliance and security best practices?
+7. What are the limitations of GitHub Actions compared to other CI/CD tools like GitLab or Jenkins?
+8. How can you customize self-hosted GitHub Action runners and manage their scale?
+9. Describe a real-world use case for composite actions and how you version them.
+10. How do you prevent secret leakage during pull request builds in public GitHub repositories?
+11. How can you manage cross-repo dependencies and coordinated releases using GitHub Workflows?
+12. What’s the best way to handle rollback strategies in GitHub-based CD pipelines?
+13. How do you integrate OPA/Gatekeeper or policy-as-code tools in GitHub Actions?
+14. How can GitHub’s GraphQL API help in automating repo health checks and metrics?
+15. How do you perform static code analysis + security scans (like SAST/Dependency Review) automatically on every PR
 
 
 
