@@ -1,5 +1,5 @@
-Dockerfile: Multi-stage image with caching and minimized attack surface
-How do you manage vulnerability scanning and patching in high-frequency deployments?
-Walk through your incident response process for a potential supply chain attack in your container registry
-You need to run Docker-in-Docker (DinD) for a nested CI pipeline. How do you design this securely and reliably?
- How do you ensure that your container images are immutable and traceable across environments?
+1. Dockerfile: Multi-stage image with caching and minimized attack surface
+2. How do you manage vulnerability scanning and patching in high-frequency deployments?
+3. Walk through your incident response process for a potential supply chain attack in your container registry
+4. You need to run Docker-in-Docker (DinD) for a nested CI pipeline. How do you design this securely and reliably?
+5. How do you ensure that your container images are immutable and traceable across environments
