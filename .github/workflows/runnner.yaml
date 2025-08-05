@@ -1,0 +1,19 @@
+name: Test Windows Laptop Runner
+
+on:
+  workflow_dispatch:  # manual trigger button
+
+jobs:
+  test-runner:
+    runs-on: self-hosted  # uses your laptop
+    steps:
+      - name: Check Runner Info
+        run: |
+          echo "Running on %COMPUTERNAME%"
+          systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+
+      - name: List current directory
+        run: dir
+
+      - name: Print Environment Variables
+        run: set
