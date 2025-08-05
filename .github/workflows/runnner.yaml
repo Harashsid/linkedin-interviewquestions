@@ -15,5 +15,4 @@ jobs:
       - name: List current directory
         run: dir
 
-      - name: Print Environment Variables
-        run: set
+     
